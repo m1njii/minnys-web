@@ -1,0 +1,206 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+    background: #F3EEEA;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: #776B5D;
+    text-align: center;
+    padding: 20px;
+    color: #F3EEEA;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+header a {
+    color: #F3EEEA;
+    text-decoration: none;
+    transition: 0.3s ease;
+    font-size: 1.2rem;
+}
+
+header a:hover {
+    color: #EBE3D5;
+    text-decoration: underline;
+}
+
+#about-us {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 20px;
+    background: #EBE3D5;
+}
+
+.card {
+    background-color: #B0A695;
+    color: #F3EEEA;
+    border-radius: 15px;
+    padding: 30px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h1 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+#productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px 20px;
+    background-color: #B0A695;
+}
+
+.producto {
+    padding: 25px;
+    background-color: #776B5D;
+    border-radius: 15px;
+    color: #F3EEEA;
+    text-align: center;
+    width: 280px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+}
+
+.producto h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.producto p {
+    margin: 10px 0;
+}
+
+.producto button {
+    background-color: #776B5D;
+    color: #EBE3D5;
+    border-radius: 12px;
+    padding: 10px 20px;
+    transition: 0.3s ease;
+    border: 1px solid #F3EEEA;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.producto button:hover {
+    background-color: #EBE3D5;
+    color: #776B5D;
+}
+
+footer {
+    text-align: center;
+    color: #EBE3D5;
+    background-color: #776B5D;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+/* Carrito */
+
+#cart {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    width: 300px;
+    max-height: 70vh;
+    background: white;
+    border: 2px solid #ccc;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    padding: 20px;
+    display: none;
+    z-index: 999;
+    overflow-y: auto;
+    border-radius: 10px;
+}
+
+#cart h2 {
+    margin-top: 0;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #776B5D;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+#cart-items li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    font-size: 0.95rem;
+}
+
+#toggle-cart {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #776B5D;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #EBE3D5;
+    font-size: 1rem;
+    z-index: 1000;
+}
+
+#close-cart {
+    margin-top: 10px;
+    background-color: #ccc;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#cart button {
+    background-color: #776B5D;
+    color: #EBE3D5;
+    border-radius: 12px;
+    padding: 10px;
+    transition: 0.3s ease;
+    border: 1px solid #F3EEEA;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#cart button:hover {
+    background-color: #EBE3D5;
+    color: #776B5D;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Confirmar Compra - Minny Bakery</title>
+  <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+  <header>
+    <h1>Minny Bakery</h1>
+    <a href="index.html">Regresar</a>
+  </header>
+
+  <!-- Resumen del carrito -->
+  <div class="cart-summary">
+    <h3>🧁 Tu pedido</h3>
+    <hr>
+    <ul id="resumen-carrito"></ul>
+    <hr>
+    <div class="total" id="total-carrito"></div>
+  </div>
+
+  <!-- Formulario de confirmación -->
+  <form id="confirmar-form">
+    <h2>Confirmar pedido</h2>
+    <hr>
+    <label for="nombre">Nombre completo:</label>
+    <input type="text" id="nombre" required>
+
+    <label for="universidad">Universidad:</label>
+    <select id="universidad" required>
+      <option value="">Seleccione una opción</option>
+      <option value="UPN (Sede Chorrillos)">UPN (Sede Chorrillos)</option>
+      <option value="Universidad Autónoma">Universidad Autónoma</option>
+    </select>
+
+    <label for="entrega">Lugar de entrega:</label>
+    <select id="entrega" required>
+      <option value="">Seleccione una opción</option>
+      <option value="Cafetería">Cafetería</option>
+      <option value="Aula">Aula</option>
+    </select>
+
+    <div id="aula-especifico">
+      <label for="aula">Especifique el aula:</label>
+      <input type="text" id="aula">
+    </div>
+
+    <button type="submit">Confirmar pedido</button>
+  </form>
+
+<script src="cart.js"></script>
+</body>
+</html>

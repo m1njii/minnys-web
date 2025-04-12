@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Minny's Bakery</title>
+  <link rel="stylesheet" href="bakery.css">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="shortcut icon" href="imgs/favico.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <h1>Minny's Bakery</h1>
+    <nav>
+      <a href="https://www.instagram.com/m1njii.jpg/" target="_blank">Más novedades aquí!</a>
+      <a href="#productos">Ir a comprar</a>
+    </nav>
+    <button id="toggle-cart">Carrito (<span id="cart-count">0</span>)</button>
+  </header>
+
+  <article id="about-us">
+    <div class="card">
+      <h1>Sobre nosotros</h1>
+      <p>
+        Somos jovenes universitarios que buscamos solventar
+        ciertos gastos de nuestras carreras con la reposteria,
+        algo que nosotros también amamos. Aún estamos escasos,
+        porque nuestros productos irán aumentando! 
+      </p>
+    </div>
+    <div class="card">
+      <h1>Alcances</h1>
+      <p>
+        Ahora solo nos desempeñamos en vender nuestros productos
+        en 2 universidades, UPN (Sede de Chorrilos) y la Universidad
+        Autonoma del Peru. Buscamos expandirnos y llegar a nuevos lugares.
+      </p>
+    </div>
+    <div class="card">
+      <h1>Meta</h1>
+      <p>
+        Tenemos como objetivo el vender nuestros productos y poder abrir
+        una cafetería, poder hacer deliverys a todos lados del Perú y
+        satisfacer el paladar de cada cliente que pase por nuestra página
+        y pronta cafetería.
+      </p>
+    </div>
+  </article>
+
+  <article id="productos">
+    <div class="producto">
+      <h2>Galletas Clásicas</h2>
+      <p>Galletas hechas en casa, con chispas de chocolate.</p>
+      <p><strong>Precio:</strong> S/ 2.00</p>
+      <button class="add-to-cart" data-name="Galletas Clásicas" data-price="2.00">Añadir al carrito</button>
+    </div>
+    <div class="producto">
+      <h2>Galletas Rellenas</h2>
+      <p>Galletas con relleno cremoso de vainilla.</p>
+      <p><strong>Precio:</strong> S/ 3.50</p>
+      <button class="add-to-cart" data-name="Galletas Rellenas" data-price="3.50">Añadir al carrito</button>
+    </div>
+    <div class="producto">
+      <h2>Galletas de Avena</h2>
+      <p>Galletas saludables con avena y miel.</p>
+      <p><strong>Precio:</strong> S/ 3.50</p>
+      <button class="add-to-cart" data-name="Galletas de Avena" data-price="3.50">Añadir al carrito</button>
+    </div>
+  </article>
+
+  <div id="cart">
+    <h2 style="text-decoration: underline;">Carrito de compras</h2>
+    <hr>
+    <ul id="cart-items"></ul>
+    <p id="total">Total: S/ 0.00</p>
+    <hr>
+    <button id="checkout">Comprar</button>
+    <button id="close-cart">Cerrar</button>
+  </div>
+
+  <footer>
+    <p>&copy; Copyright 2025. Minny shop.</p>
+  </footer>
+
+  <script src="bakery.js"></script>
+</body>
+</html>
