@@ -48,7 +48,6 @@
     cartContainer.style.display = "none";
   });
 
-  // 👉 Este es el botón que redirige y guarda el carrito
   document.getElementById("checkout").addEventListener("click", () => {
     localStorage.setItem("cart", JSON.stringify(cart));
     window.location.href = "cart.html";
