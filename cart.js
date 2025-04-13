@@ -34,7 +34,7 @@ function mostrarResumenCarrito() {
 
     const carrito = JSON.parse(localStorage.getItem("cart")) || [];
 
-      let mensaje = `🛍️ *Pedido de Minny's Bakery*%0A`;
+      let mensaje = `🛍️ *Pedido de Minny and Cookies*%0A`;
     mensaje += `👤 Nombre: ${nombre}%0A`;
     mensaje += `🏫 Universidad: ${universidad}%0A`;
     mensaje += `📍 Entrega: ${entrega}${entrega === "Aula" ? " - " + aula : ""}%0A`;
