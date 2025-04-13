@@ -204,3 +204,108 @@ footer {
     background-color: #EBE3D5;
     color: #776B5D;
 }
+
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header a {
+        font-size: 0.8rem;
+    }
+
+    header nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    
+    #productos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .producto {
+        font-size: 0.9rem;
+        width: 80%;
+        margin-bottom: 20px;
+    }
+    
+    #toggle-cart {
+        top: 15px;
+        right: 15px;
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+    
+    #cart {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 92vw;
+        height: 100vh;
+        max-height: 100vh;
+        background-color: #ffffffee;
+        padding: 25px 15px;
+        border-radius: 0;
+        box-shadow: none;
+        overflow-y: auto;
+        z-index: 1000;
+        display: none;
+    }
+    
+    #cart h2 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+        color: #776B5D;
+    }
+    
+    #cart-items {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    #cart-items div {
+        background-color: #F3EEEA;
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 0.95rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    #cart button {
+        margin-top: 20px;
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+        border-radius: 10px;
+        background-color: #776B5D;
+        color: #EBE3D5;
+        border: 1px solid #F3EEEA;
+        cursor: pointer;
+    }
+    
+    #cart button:hover {
+        background-color: #EBE3D5;
+        color: #776B5D;
+    }
+    
+    #close-cart {
+        background-color: #ccc;
+        padding: 8px 12px;
+        border-radius: 10px;
+        margin-top: 15px;
+        width: 100%;
+        font-weight: bold;
+    }
+}
+    
