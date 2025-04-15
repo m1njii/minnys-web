@@ -31,13 +31,17 @@ function mostrarResumenCarrito() {
     const universidad = document.getElementById("universidad").value;
     const entrega = document.getElementById("entrega").value;
     const aula = document.getElementById("aula").value.trim();
+    const hora = document.getElementById("hora").value.trim();
+    const pago = document.getElementById("pago").value;
 
     const carrito = JSON.parse(localStorage.getItem("cart")) || [];
 
-      let mensaje = `🛍️ *Pedido de Minny and Cookies*%0A`;
+      let mensaje = `🛍️ *Pedido de Minny's Bakery*%0A`;
     mensaje += `👤 Nombre: ${nombre}%0A`;
     mensaje += `🏫 Universidad: ${universidad}%0A`;
     mensaje += `📍 Entrega: ${entrega}${entrega === "Aula" ? " - " + aula : ""}%0A`;
+    mensaje += `🕰️ Hora: ${hora}%0A`
+    mensaje += `💸 Método de pago: ${pago}%0A`
     mensaje += `%0A🧁 *Productos:*%0A`;
 
     let total = 0;
