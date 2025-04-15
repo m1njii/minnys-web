@@ -2,12 +2,10 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=7">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Confirmar Compra - Minny Bakery</title>
   <link rel="stylesheet" href="cart.css">
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="shortcut icon" href="imgs/favico.ico" type="image/x-icon">
 </head>
 <body>
 
@@ -17,42 +15,54 @@
   </header>
 
   <!-- Resumen del carrito -->
-  <div class="cart-summary">
-    <h3>🧁 Tu pedido</h3>
-    <hr>
-    <ul id="resumen-carrito"></ul>
-    <hr>
-    <div class="total" id="total-carrito"></div>
-  </div>
-
-  <!-- Formulario de confirmación -->
-  <form id="confirmar-form">
-    <h2>Confirmar pedido</h2>
-    <hr>
-    <label for="nombre">Nombre completo:</label>
-    <input type="text" id="nombre" required>
-
-    <label for="universidad">Universidad:</label>
-    <select id="universidad" required>
-      <option value="">Seleccione una opción</option>
-      <option value="UPN (Sede Chorrillos)">UPN (Sede Chorrillos)</option>
-      <option value="Universidad Autónoma">Universidad Autónoma</option>
-    </select>
-
-    <label for="entrega">Lugar de entrega:</label>
-    <select id="entrega" required>
-      <option value="">Seleccione una opción</option>
-      <option value="Cafetería">Cafetería</option>
-      <option value="Aula">Aula</option>
-    </select>
-
-    <div id="aula-especifico">
-      <label for="aula">Especifique el aula:</label>
-      <input type="text" id="aula">
+  <div class="main-container">
+    <div class="cart-summary">
+      <h3>🧁 Tu pedido</h3>
+      <hr>
+      <ul id="resumen-carrito"></ul>
+      <hr>
+      <div class="total" id="total-carrito"></div>
     </div>
+    
+    <!-- Formulario de confirmación -->
+    <form id="confirmar-form">
+      <h2>Confirmar pedido</h2>
+      <hr>
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" required>
+      
+      <label for="universidad">Universidad:</label>
+      <select id="universidad" required>
+        <option value="">Seleccione una opción</option>
+        <option value="UPN (Sede Chorrillos)">UPN (Sede Chorrillos)</option>
+        <option value="Universidad Autónoma">Universidad Autónoma</option>
+      </select>
+      
+      <label for="entrega">Lugar de entrega:</label>
+      <select id="entrega" required>
+        <option value="">Seleccione una opción</option>
+        <option value="Cafetería">Cafetería</option>
+        <option value="Aula">Aula</option>
+      </select>
+      
+      <div id="aula-especifico">
+        <label for="aula">Especifique el aula:</label>
+        <input type="text" id="aula">
+      </div>
 
-    <button type="submit">Confirmar pedido</button>
-  </form>
+      <label for="hora">Hora de entrega:</label>
+        <input type="text" id="hora" placeholder="Ej: 10:30 a.m." required>
+
+      <label for="pago">Método de pago:</label>
+        <select id="pago" required>
+          <option value="">Seleccione una opción</option>
+          <option value="Yape/Plin">Yape / Plin</option>
+          <option value="Efectivo">Efectivo</option>
+        </select>
+      
+      <button type="submit">Confirmar pedido</button>
+    </form>
+  </div>
 
 <script src="cart.js"></script>
 </body>
