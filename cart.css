@@ -1,16 +1,11 @@
 body {
     font-family: 'Work Sans', sans-serif;
     background-color: #F3EEEA;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
     margin: 0;
 }
 
 header {
     background-color: #776B5D;
-    width: 100%;
     text-align: center;
     margin-bottom: 20px;
     padding: 20px;
@@ -34,6 +29,13 @@ header a {
 header a:hover {
     color: #EBE3D5;
     text-decoration: underline;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
 }
 
 .cart-summary {
@@ -82,33 +84,49 @@ label {
     margin-top: 15px;
     font-weight: bold;
     }
+    
+    input, select {
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        margin-top: 5px;
+    }
+    
+    #aula-especifico {
+        display: none;
+    }
+    
+    button {
+        margin-top: 20px;
+        padding: 12px;
+        width: 100%;
+        background-color: #776B5D;
+        color: #EBE3D5;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+    
+    button:hover {
+        background-color: #EBE3D5;
+        color: #776B5D;
+    }
 
-input, select {
-    width: 100%;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    margin-top: 5px;
-}
+    #confirmar-form {
+        margin-bottom: 20px;
+    }
 
-#aula-especifico {
-    display: none;
-}
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+    }
 
-button {
-    margin-top: 20px;
-    padding: 12px;
-    width: 100%;
-    background-color: #776B5D;
-    color: #EBE3D5;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
+    .cart-summary {
+        width: 350px;
+    }
 
-button:hover {
-    background-color: #EBE3D5;
-    color: #776B5D;
 }
