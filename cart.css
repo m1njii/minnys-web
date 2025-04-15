@@ -43,7 +43,8 @@ header a:hover {
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    width: 350px;
+    max-width: 500px;
+    width: 480px;
     height: fit-content;
 }
 
@@ -126,7 +127,7 @@ label {
     }
 
     .cart-summary {
-        width: 350px;
+        width: 80%;
     }
 
 }
