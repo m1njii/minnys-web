@@ -1,7 +1,9 @@
 const entregaSelect = document.getElementById("entrega");
     const aulaDiv = document.getElementById("aula-especifico");
     const resumenCarrito = document.getElementById("resumen-carrito");
+    const universidadSelect = document.getElementById("universidad");
     const totalCarrito = document.getElementById("total-carrito");
+    const horaSelect = document.getElementById("hora");
 
     entregaSelect.addEventListener("change", () => {
     aulaDiv.style.display = entregaSelect.value === "Aula" ? "block" : "none";
