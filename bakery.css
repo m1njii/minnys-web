@@ -134,7 +134,7 @@ footer {
     position: fixed;
     top: 80px;
     right: 20px;
-    width: 300px;
+    width: 350px;
     max-height: 70vh;
     background: white;
     border: 2px solid #ccc;
@@ -193,8 +193,7 @@ footer {
 }
 
 #cart button {
-    background-color: #776B5D;
-    color: #EBE3D5;
+    color: #776B5D;
     border-radius: 12px;
     padding: 10px;
     transition: 0.3s ease;
