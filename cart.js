@@ -83,7 +83,7 @@
         let mensaje = `🛍️ *Buenas, vengo a hacer un pedido a Minny and Cookies*%0A`;
         mensaje += `👤 Mi nombre es: ${nombre}%0A`;
         mensaje += `🏫 Universidad: ${universidad}%0A`;
-        mensaje += `📍 Me gustaria recibirlo en: ${entrega}${entrega === "Aula" ? " - " + aula : ""}%0A`;
+        mensaje += `📍 Lugar de entrega: ${entrega}${entrega === "Aula" ? " - " + aula : ""}%0A`;
         mensaje += `🕰️ Día y hora: ${hora}%0A`;
         mensaje += `💸 Pagaré con: ${pago}%0A%0A`;
         mensaje += `🧁 *Quiero comprar:*%0A`;
