@@ -1,24 +1,26 @@
-const entregaSelect = document.getElementById("entrega");
-    const aulaDiv = document.getElementById("aula-especifico");
+document.addEventListener("DOMContentLoaded", () => {
     const resumenCarrito = document.getElementById("resumen-carrito");
-    const universidadSelect = document.getElementById("universidad");
     const totalCarrito = document.getElementById("total-carrito");
+    const confirmarForm = document.getElementById("confirmar-form");
+    const entregaSelect = document.getElementById("entrega");
+    const aulaInput = document.getElementById("aula-especifico");
+    const universidadSelect = document.getElementById("universidad");
     const horaSelect = document.getElementById("hora");
 
-    entregaSelect.addEventListener("change", () => {
-    aulaDiv.style.display = entregaSelect.value === "Aula" ? "block" : "none";
-    });
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-function mostrarResumenCarrito() {
-    const carrito = JSON.parse(localStorage.getItem("cart")) || [];
+    function renderCarrito() {
     resumenCarrito.innerHTML = "";
     let total = 0;
 
-    carrito.forEach(item => {
+    carrito.forEach((item, index) => {
+        total += item.precio;
         const li = document.createElement("li");
-        li.innerHTML = `<span>${item.name}</span><span>S/ ${item.price.toFixed(2)}</span>`;
+        li.innerHTML = `
+        ${item.nombre} - S/ ${item.precio.toFixed(2)}
+        <button class="eliminar-item" data-index="${index}" style="margin: 0; padding: 0; width: 1rem; background: none;">❌</button>
+        `;
         resumenCarrito.appendChild(li);
-        total += item.price;
     });
 
     totalCarrito.textContent = `Total: S/ ${total.toFixed(2)}`;
