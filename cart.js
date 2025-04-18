@@ -80,13 +80,13 @@
         const hora = horaSelect.value;
         const pago = document.getElementById("pago").value;
 
-        let mensaje = `🛍️ *Pedido de Minny's Bakery*%0A`;
-        mensaje += `👤 Nombre: ${nombre}%0A`;
+        let mensaje = `🛍️ *Buenas, vengo a hacer un pedido a Minny & Cookies*%0A`;
+        mensaje += `👤 Mi nombre es: ${nombre}%0A`;
         mensaje += `🏫 Universidad: ${universidad}%0A`;
-        mensaje += `📍 Entrega: ${entrega}${entrega === "Aula" ? " - " + aula : ""}%0A`;
-        mensaje += `🕰️ Hora: ${hora}%0A`;
-        mensaje += `💸 Método de pago: ${pago}%0A%0A`;
-        mensaje += `🧁 *Productos:*%0A`;
+        mensaje += `📍 Me gustaria recibirlo en: ${entrega}${entrega === "Aula" ? " - " + aula : ""}%0A`;
+        mensaje += `🕰️ Día y hora: ${hora}%0A`;
+        mensaje += `💸 Pagaré con: ${pago}%0A%0A`;
+        mensaje += `🧁 *Quiero comprar:*%0A`;
 
         let total = 0;
         carrito.forEach(item => {
