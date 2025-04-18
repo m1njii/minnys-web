@@ -24,6 +24,40 @@ function mostrarResumenCarrito() {
 
     mostrarResumenCarrito();
 
+    entregaSelect.addEventListener("change", () => {
+    aulaInput.style.display = entregaSelect.value === "Aula" ? "block" : "none";
+    });
+
+    universidadSelect.addEventListener("change", () => {
+    const universidad = universidadSelect.value;
+    horaSelect.innerHTML = '<option value="">Seleccione una hora</option>';
+
+    let opciones = [];
+
+    if (universidad === "UPN (Sede Chorrillos)") {
+        opciones = [
+        "Lunes | 2:00pm - 5:40pm",
+        "Martes | 10:00am - 2:00pm",
+        "Jueves | 10:00am - 2:00pm",
+        "Viernes | 12:00am - 1:30pm"
+        ];
+    } else if (universidad === "Universidad Autónoma") {
+        opciones = [
+        "Lunes | 8:00am - 12:00pm",
+        "Miércoles | 8:00am - 12:00pm",
+        "Jueves | 8:00am - 12:00pm",
+        "Viernes | 8:00am - 12:00pm"
+        ];
+    }
+
+    opciones.forEach(hora => {
+        const option = document.createElement("option");
+        option.value = hora;
+        option.textContent = hora;
+        horaSelect.appendChild(option);
+    });
+    });
+
     document.getElementById("confirmar-form").addEventListener("submit", function (e) {
     e.preventDefault();
 
