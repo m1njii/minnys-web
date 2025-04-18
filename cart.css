@@ -17,6 +17,8 @@ header h1 {
     margin: 0;
     font-weight: 800;
     letter-spacing: 2px;
+    margin-bottom: 10px;
+    font-size: 3rem;
 }
 
 header a {
@@ -59,10 +61,15 @@ header a:hover {
     }
 
 .cart-summary li {
-    margin-bottom: 8px;
+    background-color: #EFEFEF;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
     display: flex;
     justify-content: space-between;
 }
+
+.cart-summary li:hover {cursor: pointer;}
 
 .cart-summary .total {
     margin-top: 15px;
@@ -121,6 +128,9 @@ label {
     }
 
 @media (max-width: 768px) {
+    header h1 {font-size: 2rem;}
+    header a {margin-top: 16px;}
+
     .main-container {
         flex-direction: column;
         align-items: center;
