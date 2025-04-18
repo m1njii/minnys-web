@@ -161,8 +161,11 @@ footer {
 #cart-items li {
     margin-bottom: 10px;
     border-bottom: 1px solid #ddd;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
     font-size: 0.95rem;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
 }
 
 #toggle-cart {
