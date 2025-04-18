@@ -300,6 +300,13 @@ footer {
         background-color: #EBE3D5;
         color: #776B5D;
     }
+
+    .remove.item {
+        background-color: #efefef;
+        width: 15%;
+        padding: 8px;
+        margin: 0;
+    }
     
     #close-cart {
         background-color: #ccc;
