@@ -27,47 +27,38 @@
     
     <!-- Formulario de confirmación -->
     <form id="confirmar-form">
-      <h2>Confirmar pedido</h2>
-      <hr>
-      <label for="nombre">Nombre completo:</label>
-      <input type="text" id="nombre" required>
-      
-      <label for="universidad">Universidad:</label>
-      <select id="universidad" required>
-        <option value="">Seleccione una opción</option>
-        <option value="UPN (Sede Chorrillos)">UPN (Sede Chorrillos)</option>
-        <option value="Universidad Autónoma">Universidad Autónoma</option>
-      </select>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" required />
 
-      
-      <div id="hora-container">
-        <label for="hora">Hora de entrega:</label>
-        <select id="hora" required>
-          <option value="">Seleccione una hora</option>
-        </select>
-      </div>
-      
-      <label for="entrega">Lugar de entrega:</label>
-      <select id="entrega" required>
-        <option value="">Seleccione una opción</option>
-        <option value="Cafetería">Cafetería</option>
-        <option value="Aula">Aula</option>
-      </select>
-      
-      <div id="aula-especifico">
-        <label for="aula">Especifique el aula:</label>
-        <input type="text" id="aula">
-      </div>
+    <label for="universidad">Universidad:</label>
+    <select id="universidad" required>
+      <option value="">Seleccione su universidad</option>
+      <option value="UPN (Sede Chorrillos)">UPN (Sede Chorrillos)</option>
+      <option value="Universidad Autónoma">Universidad Autónoma</option>
+    </select>
 
-      <label for="pago">Método de pago:</label>
-        <select id="pago" required>
-          <option value="">Seleccione una opción</option>
-          <option value="Yape/Plin">Yape / Plin</option>
-          <option value="Efectivo">Efectivo</option>
-        </select>
-      
-      <button type="submit">Confirmar pedido</button>
-    </form>
+    <label for="hora">Hora de entrega:</label>
+    <select id="hora" required>
+      <option value="">Seleccione una hora</option>
+    </select>
+
+    <label for="entrega">Lugar de entrega:</label>
+    <select id="entrega" required>
+      <option value="Cafetería">Cafetería</option>
+      <option value="Puerta">Puerta</option>
+      <option value="Aula">Aula</option>
+    </select>
+
+    <input type="text" id="aula-especifico" placeholder="Especifique aula" style="display: none;" />
+
+    <label for="pago">Método de pago:</label>
+    <select id="pago" required>
+      <option value="Yape/Plin">Yape/Plin</option>
+      <option value="Efectivo">Efectivo</option>
+    </select>
+
+    <button type="submit">Enviar pedido por WhatsApp</button>
+  </form>
   </div>
 
 <script src="cart.js"></script>
