@@ -80,7 +80,7 @@
         const hora = horaSelect.value;
         const pago = document.getElementById("pago").value;
 
-        let mensaje = `🛍️ *Buenas, vengo a hacer un pedido a Minny & Cookies*%0A`;
+        let mensaje = `🛍️ *Buenas, vengo a hacer un pedido a Minny and Cookies*%0A`;
         mensaje += `👤 Mi nombre es: ${nombre}%0A`;
         mensaje += `🏫 Universidad: ${universidad}%0A`;
         mensaje += `📍 Me gustaria recibirlo en: ${entrega}${entrega === "Aula" ? " - " + aula : ""}%0A`;
