@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const nombre = document.getElementById("nombre").value.trim();
         const universidad = universidadSelect.value;
         const entrega = entregaSelect.value;
-        const aula = document.getElementById("aula-especifico").value.trim(); // ✅ Corregido
+        const aula = document.getElementById("aula-especifico").value.trim();
         const hora = horaSelect.value;
         const pago = document.getElementById("pago").value;
     
@@ -89,25 +89,26 @@ document.addEventListener("DOMContentLoaded", () => {
         let productosMensaje = "";
     
         carrito.forEach(item => {
-        const cantidad = item.cantidad || 1;
-        const subtotal = item.precio * cantidad;
-        total += subtotal;
-        productosMensaje += `• ${item.nombre} x${cantidad} - S/ ${subtotal.toFixed(2)}%0A`;
+            const cantidad = item.cantidad || 1;
+            const subtotal = item.precio * cantidad;
+            total += subtotal;
+            productosMensaje += `• ${item.nombre} x${cantidad} - S/ ${subtotal.toFixed(2)}\n`;
         });
     
-        // Mensaje completo
-        let mensaje = `🛍️ *Pedido de Minny's Bakery*%0A`;
-        mensaje += `👤 Nombre: ${nombre}%0A`;
-        mensaje += `🏫 Universidad: ${universidad}%0A`;
-        mensaje += `📍 Entrega: ${entrega}${entrega === "Aula" ? " - " + aula : ""}%0A`;
-        mensaje += `🕰️ Hora: ${hora}%0A`;
-        mensaje += `💸 Método de pago: ${pago}%0A%0A`;
-        mensaje += `🧁 *Productos:*%0A${productosMensaje}`;
-        mensaje += `%0A💵 Total: S/ ${total.toFixed(2)}`;
+        // Crear el mensaje con saltos de línea reales
+        let mensaje = `🛍️ *Pedido de Minny's Bakery*\n`;
+        mensaje += `👤 Nombre: ${nombre}\n`;
+        mensaje += `🏫 Universidad: ${universidad}\n`;
+        mensaje += `📍 Entrega: ${entrega}${entrega === "Aula" ? " - " + aula : ""}\n`;
+        mensaje += `🕰️ Hora: ${hora}\n`;
+        mensaje += `💸 Método de pago: ${pago}\n\n`;
+        mensaje += `🧁 *Productos:*\n${productosMensaje}`;
+        mensaje += `\n💵 Total: S/ ${total.toFixed(2)}`;
     
         // Codificar el mensaje y redirigir a WhatsApp
         const telefono = "51993446468";
-        const urlMensaje = encodeURIComponent(mensaje); // ✅ Codificado correctamente
+        const urlMensaje = encodeURIComponent(mensaje);
         window.location.href = `https://wa.me/${telefono}?text=${urlMensaje}`;
     });
+    
 });
