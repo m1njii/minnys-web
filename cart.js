@@ -77,25 +77,25 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         
         const nombre = document.getElementById("nombre").value.trim();
-        const universidad = document.getElementById("universidad").value;
-        const entrega = document.getElementById("entrega").value;
-        const aula = document.getElementById("aula").value.trim();
-        const hora = document.getElementById("hora").value;
+        const universidad = universidadSelect.value;
+        const entrega = entregaSelect.value;
+        const aula = document.getElementById("aula-especifico").value.trim(); // ✅ Corregido
+        const hora = horaSelect.value;
         const pago = document.getElementById("pago").value;
-        
+    
         const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
         
         let total = 0;
         let productosMensaje = "";
-        const productos = carrito.map(item => {
-            const cantidad = item.cantidad || 1;
-            const subtotal = item.precio * cantidad;
-            total += subtotal;
-            productosMensaje += `• ${item.nombre} x${cantidad} - S/ ${subtotal.toFixed(2)}%0A`;
-            return { nombre: item.nombre, precio: item.precio, cantidad };
+    
+        carrito.forEach(item => {
+        const cantidad = item.cantidad || 1;
+        const subtotal = item.precio * cantidad;
+        total += subtotal;
+        productosMensaje += `• ${item.nombre} x${cantidad} - S/ ${subtotal.toFixed(2)}%0A`;
         });
-
-        // Enviar a WhatsApp
+    
+        // Mensaje completo
         let mensaje = `🛍️ *Pedido de Minny's Bakery*%0A`;
         mensaje += `👤 Nombre: ${nombre}%0A`;
         mensaje += `🏫 Universidad: ${universidad}%0A`;
@@ -104,8 +104,10 @@ document.addEventListener("DOMContentLoaded", () => {
         mensaje += `💸 Método de pago: ${pago}%0A%0A`;
         mensaje += `🧁 *Productos:*%0A${productosMensaje}`;
         mensaje += `%0A💵 Total: S/ ${total.toFixed(2)}`;
-        
+    
+        // Codificar el mensaje y redirigir a WhatsApp
         const telefono = "51993446468";
-        window.location.href = `https://wa.me/${telefono}?text=${mensaje}`;
+        const urlMensaje = encodeURIComponent(mensaje); // ✅ Codificado correctamente
+        window.location.href = `https://wa.me/${telefono}?text=${urlMensaje}`;
     });
 });
