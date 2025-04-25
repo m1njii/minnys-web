@@ -509,8 +509,16 @@ span.quantity {
 
     /* Adaptar el layout en móviles */
     .testimonio {
+        padding: 3px;
+        background-color: #B0A695;
         max-width: 90%;
-        margin: 0 auto;
+        margin: 10px auto;
+        border-radius: 12px;
+        color: #F3EEEA;
+    }
+
+    .testimonio strong {
+        color: #776B5D;
     }
 
     #cart button.decrement, #cart button.increment, #cart button.remove-item {
@@ -520,4 +528,3 @@ span.quantity {
         width: 30%;
     }
 }
-    
