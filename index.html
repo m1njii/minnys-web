@@ -15,86 +15,81 @@
     <h1>Minny & Cookies</h1>
     <nav>
       <a href="soon.html" target="_blank">Más novedades aquí!</a>
-      <a href="#productos">Ir a comprar</a>
     </nav>
     <button id="toggle-cart">Carrito (<span id="cart-count">0</span>)</button>
   </header>
+  
+  
+  <article id="minny">
+    <h2>¿Qué somos?</h2>
+    <p>
+      Minny & Cookies es una pequeña tienda artesanal dedicada a la creación de postres caseros que endulzan cada momento. Nacimos con el sueño de llevar un pedacito de felicidad en cada mordida, y poco a poco
+      vamos creciendo para ofrecerte más delicias. Muy pronto, nuestro catálogo estará lleno de sorpresas para que te des ese gustito que tanto mereces.
+    </p>
+    <a href="#productos" class="btn-ir-a-comprar">Ir a comprar</a>
+  </article>
 
   <article id="about-us">
-    <div class="card">
-      <h1>Sobre nosotros</h1>
-      <p>
-        Somos jóvenes universitarios que buscamos solventar ciertos gastos de nuestras carreras con la repostería, algo que nosotros también amamos. Aún estamos escasos, porque nuestros productos irán aumentando!
-      </p>
-    </div>
-    <div class="card">
-      <h1>Alcances</h1>
-      <p>
-        Ahora solo nos desempeñamos en vender nuestros productos en 2 universidades, UPN (Sede de Chorrillos) y la Universidad Autónoma del Perú. Buscamos expandirnos y llegar a nuevos lugares.
-      </p>
-    </div>
-    <div class="card">
-      <h1>Meta</h1>
-      <p>
-        Tenemos como objetivo el vender nuestros productos y poder abrir una cafetería, poder hacer deliverys a todos lados del Perú y satisfacer el paladar de cada cliente que pase por nuestra página y pronta cafetería.
-      </p>
+    <div class="about-wrapper">
+      <div class="about-text">
+        <h1>Sobre nosotros</h1>
+        <p>
+          Somos un grupo de estudiantes universitarios con una pasión compartida: la repostería. Más allá de cubrir gastos, encontramos en ella una forma de expresarnos y compartir alegría a través de cada dulce.
+        </p>
+        <p>
+          Empezamos vendiendo en nuestras universidades —UPN Chorrillos y la Universidad Autónoma del Perú— y cada venta nos acerca un paso más a nuestro gran sueño.
+        </p>
+        <p>
+          Nuestra meta es abrir una cafetería donde puedas disfrutar de un momento bonito, rico y acogedor. Queremos llegar a más personas, con más productos, y seguir endulzando caminos.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="imgs/about-us.jpg" alt="Nuestro equipo" />
+      </div>
     </div>
   </article>
+  
 
   <article id="productos">
     <div class="producto">
-      <img src="imgs/3-galletas.png" alt="Galletas Clásicas" style="width: 50%; border-radius: 10px; margin-bottom: 10px;">
+      <img src="imgs/pack-3.png" alt="Galletas Clásicas" style="width: 50%; border-radius: 10px; margin-bottom: 10px;">
       <h2>Pack 3 - Galletas Clásicas</h2>
-<!--       <p>Bolsita de 3 galletas con chispas de chocolate hechas en casa.</p> -->
       <p><strong>Precio:</strong> S/ 2.00</p>
       <button class="add-to-cart" data-name="Pack 3 - Galletas Clásicas" data-price="2.00">Añadir al carrito</button>
     </div>
     <div class="producto">
-      <img src="imgs/5-galletas.png" alt="Galletas Clásicas" style="width: 50%; border-radius: 10px; margin-bottom: 10px;">
+      <img src="imgs/pack-5.png" alt="Galletas Clásicas" style="width: 50%; border-radius: 10px; margin-bottom: 10px;">
       <h2>Pack 5 - Galletas Clásicas</h2>
-<!--       <p>Bolsita de 5 galletas con chispas de chocolate hechas en casa.</p> -->
       <p><strong>Precio:</strong> S/ 3.00</p>
       <button class="add-to-cart" data-name="Pack 5 - Galletas Clásicas" data-price="3.00">Añadir al carrito</button>
     </div>
     <div class="producto">
-      <img src="imgs/keke-de-platano.png" alt="Keke de Plátano" style="width: 50%; border-radius: 10px; margin-bottom: 10px;">
-      <h2>Tajada de Keke de Plátano</h2>
-<!--       <p>Tajada de keke hecho a base de plátano, con chispas de chocolate.</p> -->
-      <p><strong>Precio:</strong> S/ ---</p>
-      <button>Muy pronto</button>
-<!--       <button class="add-to-cart" data-name="Keke de Plátano" data-price="1.50">Añadir al carrito</button> -->
+      <img src="imgs/pepsi.png" alt="Pepsi 335ml" style="width: 50%; border-radius: 10px; margin-bottom: 10px;">
+      <h2>Pepsi Personal 335ml</h2>
+      <p><strong>Precio:</strong> S/ 1.20</p>
+      <button class="add-to-cart" data-name="Pepsi 335ml" data-price="1.20">Añadir al carrito</button>
     </div>   
     <div class="producto">
-      <img src="imgs/muffin-de-naranja.png" alt="Muffin de Naranja" style="width: 50%; border-radius: 10px; margin-bottom: 10px;">
-      <h2>Muffin de Naranja con Chispas de Chocolate</h2>
-<!--       <p>Hecho a base de harina y naranja, lleva trozos de chocolate.</p> -->
+      <img src="imgs/desconocido-1.png" alt="???" style="width: 50%; border-radius: 10px; margin-bottom: 10px;">
+      <h2>???</h2>
       <p><strong>Precio:</strong> S/ ---</p>
-      <button>Muy pronto</button>
+      <button disabled>Muy pronto</button>
       <!--<button class="add-to-cart" data-name="Muffin de Naranja" data-price="2.00">Añadir al carrito</button>-->
     </div>
-  <!-- 
     <div class="producto">
-      <img src="ruta/de/la/imagen.jpg" alt="Galletas Clásicas" style="width: 50%; border-radius: 10px; margin-bottom: 10px;">
-      <h2>Galletas Clásicas</h2>
-      <p>Galletas hechas en casa, con chispas de chocolate.</p>
-      <p><strong>Precio:</strong> S/ 2.00</p>
-      <button class="add-to-cart" data-name="Galletas Clásicas" data-price="2.00">Añadir al carrito</button>
+      <img src="imgs/desconocido-2.png" alt="???" style="width: 50%; border-radius: 10px; margin-bottom: 10px;">
+      <h2>???</h2>
+      <p><strong>Precio:</strong> S/ ---</p>
+      <button disabled>Muy pronto</button>
+      <!--<button class="add-to-cart" data-name="Muffin de Naranja" data-price="2.00">Añadir al carrito</button>-->
     </div>
     <div class="producto">
-      <img src="ruta/de/la/imagen.jpg" alt="Galletas Clásicas" style="width: 50%; border-radius: 10px; margin-bottom: 10px;">
-      <h2>Galletas Clásicas</h2>
-      <p>Galletas hechas en casa, con chispas de chocolate.</p>
-      <p><strong>Precio:</strong> S/ 2.00</p>
-      <button class="add-to-cart" data-name="Galletas Clásicas" data-price="2.00">Añadir al carrito</button>
+      <img src="imgs/desconocido-3.png" alt="???" style="width: 50%; border-radius: 10px; margin-bottom: 10px;">
+      <h2>???</h2>
+      <p><strong>Precio:</strong> S/ ---</p>
+      <button disabled>Muy pronto</button>
+      <!--<button class="add-to-cart" data-name="Muffin de Naranja" data-price="2.00">Añadir al carrito</button>-->
     </div>
-    <div class="producto">
-      <img src="ruta/de/la/imagen.jpg" alt="Galletas Clásicas" style="width: 50%; border-radius: 10px; margin-bottom: 10px;">
-      <h2>Galletas Clásicas</h2>
-      <p>Galletas hechas en casa, con chispas de chocolate.</p>
-      <p><strong>Precio:</strong> S/ 2.00</p>
-      <button class="add-to-cart" data-name="Galletas Clásicas" data-price="2.00">Añadir al carrito</button>
-    </div>
-    -->
     
   </article>
 
@@ -107,6 +102,18 @@
     <button id="checkout">Comprar</button>
     <button id="close-cart">Cerrar</button>
   </div>
+
+  <section id="testimonios">
+    <h2>Lo que dicen nuestros clientes</h2>
+    <div class="testimonio">
+        <p>"Las galletas están buenísimas, quiero 5 más para mañana!"</p>
+        <p><strong>- Matheuw</strong></p>
+    </div>
+    <div class="testimonio">
+        <p>"Si es posible, trae galletas todos los días, yo compraré."</p>
+        <p><strong>- Sebastián</strong></p>
+    </div>
+  </section>
 
   <footer>
     <p>Minny & Cookies</p>
