@@ -102,11 +102,11 @@ document.addEventListener("DOMContentLoaded", () => {
             productosMensaje += `• ${item.nombre} x${cantidad} - S/ ${subtotal.toFixed(2)}\n`;
         });
 
-        let mensaje = `Hola, soy ${nombre} y me gustaría hacer un pedido a Minny and Cookies.`;
-        mensaje += ` Me encuentro en ${lugar} y deseo recibir el pedido en: ${lugarEspecifico}.`;
-        mensaje += ` Podría recibirlo el día ${hora} y pagaré mediante ${pago}.`;
+        let mensaje = `Hola, soy *${nombre}* y me gustaría hacer un pedido a Minny and Cookies.`;
+        mensaje += ` Me encuentro en *${lugar}* y deseo recibir el pedido en: *${lugarEspecifico}*.`;
+        mensaje += ` Podría recibirlo el día *${hora}* y pagaré mediante *${pago}*.`;
         mensaje += `\n\nEstoy solicitando los siguientes productos:\n${productosMensaje}`;
-        mensaje += `\n\nEl total de mi pedido es S/ ${total.toFixed(2)}. ¡Gracias! 🍪🧁`;
+        mensaje += `\nEl total de mi pedido es S/ ${total.toFixed(2)}. ¡Gracias! 🍪🧁`;
 
         const telefono = "51935343336";
         const urlMensaje = encodeURIComponent(mensaje);
