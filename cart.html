@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-   <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=7">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carrito - M&Cookies</title>
@@ -30,41 +30,37 @@
     
     <!-- Formulario de confirmación -->
     <form id="confirmar-form">
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" required />
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" required />
 
-    <label for="universidad">Universidad:</label>
-    <select id="universidad" required>
-      <option value="">Seleccione su universidad</option>
-      <option value="UPN (Sede Chorrillos)">UPN (Sede Chorrillos)</option>
-      <option value="Universidad Autónoma">Universidad Autónoma</option>
-    </select>
+      <label for="lugar">Lugar de entrega:</label>
+      <select id="lugar" required>
+        <option value="">Seleccione una opción</option>
+        <option value="UPN (Sede Chorrillos)">UPN (Sede Chorrillos)</option>
+        <option value="Universidad Autónoma">Universidad Autónoma</option>
+        <option value="Otro lugar">Otro lugar</option>
+      </select>
 
-    <label for="hora">Hora de entrega:</label>
-    <select id="hora" required>
-      <option value="">Seleccione una hora</option>
-    </select>
+      <input type="text" id="lugar-especifico" placeholder="Especifique aula o lugar" style="display: none;" />
 
-    <label for="entrega">Lugar de entrega:</label>
-    <select id="entrega" required>
-      <option value="">Seleccione un lugar</option>
-      <option value="Cafetería">Cafetería</option>
-      <option value="Aula">Aula</option>
-    </select>
+      <label for="hora">Día y hora de entrega:</label>
+      <select id="hora" required>
+        <option value="">Seleccione una hora</option>
+      </select>
 
-    <input type="text" id="aula-especifico" placeholder="Especifique aula" style="display: none;" />
+      <input type="text" id="aula-especifico" placeholder="Especifique aula" style="display: none;" />
 
-    <label for="pago">Método de pago:</label>
-    <select id="pago" required>
-      <option value="">Seleccione un método</option>
-      <option value="Yape/Plin">Yape/Plin</option>
-      <option value="Efectivo">Efectivo</option>
-    </select>
+      <label for="pago">Método de pago:</label>
+      <select id="pago" required>
+        <option value="">Seleccione un método</option>
+        <option value="Yape/Plin">Yape/Plin</option>
+        <option value="Efectivo">Efectivo</option>
+      </select>
 
-    <button type="submit">Enviar pedido por WhatsApp</button>
-  </form>
+      <button type="submit">Enviar pedido por WhatsApp</button>
+    </form>
   </div>
 
-<script src="cart.js"></script>
+  <script src="cart.js"></script>
 </body>
 </html>
