@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const confirmarForm = document.getElementById("confirmar-form");
     const entregaSelect = document.getElementById("entrega");
     const aulaInput = document.getElementById("aula-especifico");
-    const universidadSelect = document.getElementById("universidad");
+    const lugarSelect = document.getElementById("lugar");
+    const lugarEspecificoInput = document.getElementById("lugar-especifico");
     const horaSelect = document.getElementById("hora");
 
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
@@ -19,8 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const li = document.createElement("li");
             li.innerHTML = `
-                ${item.nombre} x${item.cantidad || 1} - S/ ${subtotal.toFixed(2)}
-                <button class="eliminar-item" data-index="${index}" style="margin: 0; padding: 0; width: 1rem; background: none;">❌</button>
+            ${item.nombre} x${item.cantidad || 1} - S/ ${subtotal.toFixed(2)}
+            <button class="eliminar-item" data-index="${index}" style="margin: 0; padding: 0; width: 1rem; background: none;">❌</button>
             `;
             resumenCarrito.appendChild(li);
         });
@@ -39,30 +40,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
     renderCarrito();
 
-    entregaSelect.addEventListener("change", () => {
-        aulaInput.style.display = entregaSelect.value === "Aula" ? "block" : "none";
-    });
+    lugarSelect.addEventListener("change", () => {
+        const lugar = lugarSelect.value;
+        const horaSelect = document.getElementById("hora");
 
-    universidadSelect.addEventListener("change", () => {
-        const universidad = universidadSelect.value;
-        horaSelect.innerHTML = '<option value="">Seleccione una hora</option>';
+        // Mostrar campo de lugar específico en todos los casos válidos
+        if (lugar === "UPN (Sede Chorrillos)" || lugar === "Universidad Autónoma" || lugar === "Otro lugar") {
+            lugarEspecificoInput.style.display = "block";
+        } else {
+            lugarEspecificoInput.style.display = "none";
+        }
+
+        horaSelect.innerHTML = '<option value="">Seleccione un día y/o hora</option>';
 
         let opciones = [];
 
-        if (universidad === "UPN (Sede Chorrillos)") {
+        if (lugar === "UPN (Sede Chorrillos)") {
             opciones = [
                 "Lunes | 2:00pm - 5:40pm",
                 "Martes | 10:00am - 2:00pm",
                 "Jueves | 10:00am - 2:00pm",
                 "Viernes | 12:00am - 1:30pm"
             ];
-        } else if (universidad === "Universidad Autónoma") {
+        } else if (lugar === "Universidad Autónoma") {
             opciones = [
                 "Lunes | 8:00am - 12:00pm",
                 "Miércoles | 8:00am - 12:00pm",
                 "Jueves | 8:00am - 12:00pm",
                 "Viernes | 8:00am - 12:00pm"
             ];
+        } else if (lugar === "Otro lugar") {
+            opciones = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"];
         }
 
         opciones.forEach(hora => {
@@ -73,42 +81,35 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    confirmarForm.addEventListener("submit", async (e) => {
+    confirmarForm.addEventListener("submit", (e) => {
         e.preventDefault();
-        
+
         const nombre = document.getElementById("nombre").value.trim();
-        const universidad = universidadSelect.value;
-        const entrega = entregaSelect.value;
-        const aula = document.getElementById("aula-especifico").value.trim();
+        const lugar = lugarSelect.value;
+        const lugarEspecifico = lugarEspecificoInput.value.trim();
         const hora = horaSelect.value;
         const pago = document.getElementById("pago").value;
-    
+
         const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-        
+
         let total = 0;
         let productosMensaje = "";
-    
+
         carrito.forEach(item => {
             const cantidad = item.cantidad || 1;
             const subtotal = item.precio * cantidad;
             total += subtotal;
             productosMensaje += `• ${item.nombre} x${cantidad} - S/ ${subtotal.toFixed(2)}\n`;
         });
-    
-        // Crear el mensaje con saltos de línea reales
-        let mensaje = `🛍️ *Pedido de Minny's Bakery*\n`;
-        mensaje += `👤 Nombre: ${nombre}\n`;
-        mensaje += `🏫 Universidad: ${universidad}\n`;
-        mensaje += `📍 Entrega: ${entrega}${entrega === "Aula" ? " - " + aula : ""}\n`;
-        mensaje += `🕰️ Hora: ${hora}\n`;
-        mensaje += `💸 Método de pago: ${pago}\n\n`;
-        mensaje += `🧁 *Productos:*\n${productosMensaje}`;
-        mensaje += `\n💵 Total: S/ ${total.toFixed(2)}`;
-    
-        // Codificar el mensaje y redirigir a WhatsApp
-        const telefono = "51993446468";
+
+        let mensaje = `Hola, soy ${nombre} y me gustaría hacer un pedido a Minny and Cookies.`;
+        mensaje += ` Me encuentro en ${lugar} y deseo recibir el pedido en: ${lugarEspecifico}.`;
+        mensaje += ` Podría recibirlo el día ${hora} y pagaré mediante ${pago}.`;
+        mensaje += `\n\nEstoy solicitando los siguientes productos:\n${productosMensaje}`;
+        mensaje += `\n\nEl total de mi pedido es S/ ${total.toFixed(2)}. ¡Gracias! 🍪🧁`;
+
+        const telefono = "51935343336";
         const urlMensaje = encodeURIComponent(mensaje);
         window.location.href = `https://wa.me/${telefono}?text=${urlMensaje}`;
     });
-    
 });
