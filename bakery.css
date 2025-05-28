@@ -183,7 +183,7 @@ header a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 10px;
     padding: 60px 20px;
     background-color: #B0A695;
 }
@@ -358,6 +358,9 @@ span.quantity {
     margin: 0 10px;
 }
 
+#productos h2 {position: fixed;}
+#productos p {position: fixed;}
+#testimonios {position: fixed;}
 
 
 @media (max-width: 768px) {
@@ -527,4 +530,8 @@ span.quantity {
         font-size: 1rem;
         width: 30%;
     }
+
+    #productos h2 {position: static;}
+    #productos p {position: static;}
+    #testimonios {position: static;}
 }
